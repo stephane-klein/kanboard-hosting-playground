@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  kanboard:
+    image: kanboard/kanboard:v1.2.26
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      SHIORI_DIR: /data/
+    volumes:
+      - ./volumes/kanboard_data/:/var/www/app/data
+      - ./volumes/kanboard_plugins/:/var/www/app/plugins
+      - ./volumes/kanboard_ssl/:/etc/nginx/ssl
