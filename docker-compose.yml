@@ -7,6 +7,7 @@ services:
       - 443:443
     environment:
       SHIORI_DIR: /data/
+      PLUGIN_INSTALLER: "true"
     volumes:
       - ./volumes/kanboard_data/:/var/www/app/data
       - ./volumes/kanboard_plugins/:/var/www/app/plugins
